@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заказать пряники | Пряничный цех N11</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="order-page">
+      <a class="back-link" href="index.html">← Вернуться в меню</a>
+      <h1>Оформить заказ</h1>
+      <p class="order-intro">
+        Оставьте данные, и мы свяжемся с вами для подтверждения заказа.
+      </p>
+
+      <form
+        class="order-form"
+        action="https://formsubmit.co/v0602054@gmail.com"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="Новый заказ | Пряничный цех N11"
+        />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <label for="product">Выберите пряник</label>
+        <select id="product" name="product" required>
+          <option value="">Выберите вариант</option>
+          <option>Круглый, 6 см — 35 грн</option>
+          <option>Квадратный, 6 см — 35 грн</option>
+          <option>Произвольная форма, 6 см — 40 грн</option>
+          <option>Круглый, 8 см — 50 грн</option>
+          <option>Квадратный, 8 см — 50 грн</option>
+          <option>Произвольная форма, 8 см — 55 грн</option>
+          <option>Круглый, 10 см — 65 грн</option>
+          <option>Квадратный, 10 см — 65 грн</option>
+          <option>Круглый, 12 см — 85 грн</option>
+          <option>Квадратный, 12 см — 85 грн</option>
+        </select>
+
+        <label for="quantity">Количество, штук</label>
+        <input
+          id="quantity"
+          name="quantity"
+          type="number"
+          min="1"
+          max="100"
+          value="1"
+          required
+        />
+
+        <label for="name">Ваше имя</label>
+        <input id="name" name="name" type="text" autocomplete="name" required />
+
+        <label for="phone">Номер телефона</label>
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          autocomplete="tel"
+          placeholder="093 464 63 62"
+          required
+        />
+
+        <label for="print-file">Картинка для печати</label>
+        <input
+          id="print-file"
+          name="print-file"
+          type="file"
+          accept="image/png, image/jpeg, image/webp"
+        />
+
+        <label for="comment">Пожелания к печати</label>
+        <textarea
+          id="comment"
+          name="comment"
+          rows="4"
+          placeholder="Например: логотип или надпись на прянике"
+        ></textarea>
+
+        <button class="submit-button" type="submit">Отправить заказ</button>
+      </form>
+    </main>
+  </body>
+</html>
